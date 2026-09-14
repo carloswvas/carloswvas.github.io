@@ -1,0 +1,304 @@
+/* ==========================================================================
+   ESTILOS GERAIS E COMPORTAMENTO BASE
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace, system-ui;
+}
+
+body {
+    background-color: #0b0f19;
+    color: #f3f4f6;
+    line-height: 1.6;
+    padding: 20px 10px;
+}
+
+.container {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   CONTAINER DO TERMINAL (JANELA)
+   ========================================================================== */
+.window {
+    background-color: #111827;
+    border: 1px solid #1f2937;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.window-bar {
+    background-color: #1f2937;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #1f2937;
+}
+
+.dots {
+    display: flex;
+    gap: 6px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+.dot-r { background-color: #ef4444; }
+.dot-y { background-color: #f59e0b; }
+.dot-g { background-color: #10b981; }
+
+.window-title {
+    font-size: 12px;
+    color: #9ca3af;
+    margin: 0 auto;
+    transform: translateX(-15px);
+}
+
+.window-content {
+    padding: 30px 20px;
+}
+
+@media (min-width: 640px) {
+    .window-content { padding: 50px 40px; }
+}
+
+/* ==========================================================================
+   CABEÇALHO E LINKS DO PERFIL
+   ========================================================================== */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid #00ffcc;
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.3);
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 32px;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #00ffcc;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    background-color: #1f2937;
+    border: 1px solid #1f2937;
+    color: #f3f4f6;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    border-color: #00ffcc;
+    color: #00ffcc;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.2);
+}
+
+/* ==========================================================================
+   SEÇÕES DE CONTEÚDO
+   ========================================================================== */
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 18px;
+    color: #00ffcc;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #1f2937;
+    padding-bottom: 5px;
+}
+
+p {
+    color: #9ca3af;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.mission {
+    color: #00ffcc;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.highlight {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   STACK / SKILLS (BADGES)
+   ========================================================================== */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tag {
+    background-color: #111827;
+    border: 1px solid #1f2937;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.skill-tag:hover {
+    border-color: #00ffcc;
+}
+
+/* ==========================================================================
+   GRID DE PROJETOS (ESTÁVEL)
+   ========================================================================== */
+.projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+@media (min-width: 550px) {
+    .projects-grid {
+        flex-direction: row;
+    }
+    .project-card {
+        flex: 1;
+    }
+}
+
+.project-badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    color: #00ffcc;
+    border: 1px solid #00ffcc;
+    border-radius: 3px;
+    padding: 2px 7px;
+    margin-bottom: 10px;
+}
+
+.project-card {
+    background-color: rgba(31, 41, 55, 0.3);
+    border: 1px solid #1f2937;
+    padding: 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: inherit;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    border-color: #00ffcc;
+    background-color: rgba(31, 41, 55, 0.5);
+}
+
+.project-title {
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.project-desc {
+    font-size: 13px;
+    color: #9ca3af;
+    margin-bottom: 12px;
+}
+
+.project-tech {
+    font-size: 12px;
+    color: #00ffcc;
+}
+
+/* ==========================================================================
+   CONTATO
+   ========================================================================== */
+.contact-links {
+    justify-content: flex-start;
+}
+
+/* ==========================================================================
+   ANIMAÇÃO DE ENTRADA
+   ========================================================================== */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.window-content > * {
+    opacity: 0;
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.window-content > *:nth-child(1) { animation-delay: 0.1s; }
+.window-content > *:nth-child(2) { animation-delay: 0.25s; }
+.window-content > *:nth-child(3) { animation-delay: 0.4s; }
+.window-content > *:nth-child(4) { animation-delay: 0.55s; }
+.window-content > *:nth-child(5) { animation-delay: 0.7s; }
+.window-content > *:nth-child(6) { animation-delay: 0.85s; }
+
+@media (prefers-reduced-motion: reduce) {
+    .window-content > * {
+        animation: none;
+        opacity: 1;
+    }
+    .cursor {
+        animation: none;
+        background-color: #00ffcc;
+    }
+}
+
+/* ==========================================================================
+   ELEMENTOS DE ANIMAÇÃO E FOOTER
+   ========================================================================== */
+.cursor {
+    display: inline-block;
+    width: 8px;
+    height: 15px;
+    background-color: #00ffcc;
+    animation: blink 1s infinite;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+@keyframes blink {
+    0%, 49% { background-color: #00ffcc; }
+    50%, 100% { background-color: transparent; }
+}
+
+footer {
+    text-align: center;
+    font-size: 12px;
+    color: #9ca3af;
+    margin-top: 50px;
+    border-top: 1px solid #1f2937;
+    padding-top: 15px;
+}
