@@ -16,7 +16,7 @@ body {
 }
 
 .container {
-    max-width: 750px;
+    max-width: 1024px;
     margin: 0 auto;
 }
 
@@ -28,7 +28,7 @@ body {
     border: 1px solid #1f2937;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
 }
 
 .window-bar {
@@ -49,9 +49,18 @@ body {
     height: 12px;
     border-radius: 50%;
 }
-.dot-r { background-color: #ef4444; }
-.dot-y { background-color: #f59e0b; }
-.dot-g { background-color: #10b981; }
+
+.dot-r {
+    background-color: #ef4444;
+}
+
+.dot-y {
+    background-color: #f59e0b;
+}
+
+.dot-g {
+    background-color: #10b981;
+}
 
 .window-title {
     font-size: 12px;
@@ -65,7 +74,9 @@ body {
 }
 
 @media (min-width: 640px) {
-    .window-content { padding: 50px 40px; }
+    .window-content {
+        padding: 50px 40px;
+    }
 }
 
 /* ==========================================================================
@@ -252,27 +263,52 @@ p {
    ANIMAÇÃO DE ENTRADA
    ========================================================================== */
 @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(16px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.window-content > * {
+.window-content>* {
     opacity: 0;
     animation: fadeInUp 0.5s ease forwards;
 }
 
-.window-content > *:nth-child(1) { animation-delay: 0.1s; }
-.window-content > *:nth-child(2) { animation-delay: 0.25s; }
-.window-content > *:nth-child(3) { animation-delay: 0.4s; }
-.window-content > *:nth-child(4) { animation-delay: 0.55s; }
-.window-content > *:nth-child(5) { animation-delay: 0.7s; }
-.window-content > *:nth-child(6) { animation-delay: 0.85s; }
+.window-content>*:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.window-content>*:nth-child(2) {
+    animation-delay: 0.25s;
+}
+
+.window-content>*:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.window-content>*:nth-child(4) {
+    animation-delay: 0.55s;
+}
+
+.window-content>*:nth-child(5) {
+    animation-delay: 0.7s;
+}
+
+.window-content>*:nth-child(6) {
+    animation-delay: 0.85s;
+}
 
 @media (prefers-reduced-motion: reduce) {
-    .window-content > * {
+    .window-content>* {
         animation: none;
         opacity: 1;
     }
+
     .cursor {
         animation: none;
         background-color: #00ffcc;
@@ -293,8 +329,16 @@ p {
 }
 
 @keyframes blink {
-    0%, 49% { background-color: #00ffcc; }
-    50%, 100% { background-color: transparent; }
+
+    0%,
+    49% {
+        background-color: #00ffcc;
+    }
+
+    50%,
+    100% {
+        background-color: transparent;
+    }
 }
 
 footer {
